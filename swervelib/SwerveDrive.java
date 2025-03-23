@@ -24,6 +24,7 @@ import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.geometry.Translation3d;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
+import edu.wpi.first.math.kinematics.SwerveDriveOdometry;
 import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import edu.wpi.first.math.numbers.N1;
@@ -86,6 +87,9 @@ public class SwerveDrive implements AutoCloseable
    * Swerve odometry.
    */
   public final  SwerveDrivePoseEstimator swerveDrivePoseEstimator;
+
+  public final  SwerveDriveOdometry odometryNoAprilTags;
+
   /**
    * IMU reading cache for robot readings.
    */
@@ -288,6 +292,8 @@ public class SwerveDrive implements AutoCloseable
             getYaw(),
             getModulePositions(),
             startingPose); // x,y,heading in radians; Vision measurement std dev, higher=less weight
+
+    odometryNoAprilTags = new SwerveDriveOdometry(kinematics, getYaw(), getModulePositions(), startingPose);
 //
 //    Rotation3d currentGyro = imuReadingCache.getValue();
 //    double offset = currentGyro.getZ() +
@@ -454,6 +460,11 @@ public class SwerveDrive implements AutoCloseable
     return swerveDrivePoseEstimator.getEstimatedPosition().getRotation();
   }
 
+  public Rotation2d getOdometryHeadingNoAprilTags()
+  {
+    return odometryNoAprilTags.getPoseMeters().getRotation();
+  }
+
   /**
    * Set the heading correction capabilities of YAGSL.
    *
@@ -589,7 +600,7 @@ public class SwerveDrive implements AutoCloseable
 
     if (fieldRelative)
     {
-      velocity = ChassisSpeeds.fromFieldRelativeSpeeds(velocity, getOdometryHeading());
+      velocity = ChassisSpeeds.fromFieldRelativeSpeeds(velocity, getOdometryHeadingNoAprilTags());
     }
     drive(velocity, isOpenLoop, new Translation2d());
   }
@@ -924,6 +935,20 @@ public class SwerveDrive implements AutoCloseable
 
   }
 
+  public void resetNoAprilTagsOdometry(Pose2d pose)
+  {
+    odometryLock.lock();
+    odometryNoAprilTags.resetPosition(getYaw(), getModulePositions(), pose);
+    if (SwerveDriveTelemetry.isSimulation)
+    {
+      mapleSimDrive.setSimulationWorldPose(pose);
+    }
+    odometryLock.unlock();
+    ChassisSpeeds robotRelativeSpeeds = ChassisSpeeds.fromRobotRelativeSpeeds(new ChassisSpeeds(0, 0, 0), getYaw());
+    kinematics.toSwerveModuleStates(robotRelativeSpeeds);
+
+  }
+
   /**
    * Post the trajectory to the field
    *
@@ -1014,6 +1039,23 @@ public class SwerveDrive implements AutoCloseable
     swerveController.lastAngleScalar = 0;
     lastHeadingRadians = 0;
     resetOdometry(new Pose2d(getPose().getTranslation(), new Rotation2d()));
+  }
+
+  public void zeroNoAprilTagsGyro()
+  {
+    // Resets the real gyro or the angle accumulator, depending on whether the robot is being
+    // simulated
+    if (SwerveDriveTelemetry.isSimulation)
+    {
+      simIMU.setAngle(0);
+    } else
+    {
+      setGyroOffset(imu.getRawRotation3d());
+    }
+    imuReadingCache.update();
+    swerveController.lastAngleScalar = 0;
+    lastHeadingRadians = 0;
+    resetNoAprilTagsOdometry(new Pose2d(getPose().getTranslation(), new Rotation2d()));
   }
 
   /**
