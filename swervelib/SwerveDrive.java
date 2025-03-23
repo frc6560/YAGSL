@@ -631,10 +631,10 @@ public class SwerveDrive implements AutoCloseable
               || Math.abs(robotRelativeVelocity.vyMetersPerSecond) > HEADING_CORRECTION_DEADBAND))
       {
         robotRelativeVelocity.omegaRadiansPerSecond =
-            swerveController.headingCalculate(getOdometryHeading().getRadians(), lastHeadingRadians);
+            swerveController.headingCalculate(getOdometryHeadingNoAprilTags().getRadians(), lastHeadingRadians);
       } else
       {
-        lastHeadingRadians = getOdometryHeading().getRadians();
+        lastHeadingRadians = getOdometryHeadingNoAprilTags().getRadians();
       }
     }
 
@@ -898,7 +898,7 @@ public class SwerveDrive implements AutoCloseable
     // but not the reverse.  However, because this transform is a simple rotation, negating the
     // angle given as the robot angle reverses the direction of rotation, and the conversion is reversed.
     ChassisSpeeds robotRelativeSpeeds = kinematics.toChassisSpeeds(getStates());
-    return ChassisSpeeds.fromRobotRelativeSpeeds(robotRelativeSpeeds, getOdometryHeading());
+    return ChassisSpeeds.fromRobotRelativeSpeeds(robotRelativeSpeeds, getOdometryHeadingNoAprilTags());
     // Might need to be this instead
     //return ChassisSpeeds.fromFieldRelativeSpeeds(
     //        kinematics.toChassisSpeeds(getStates()), getOdometryHeading().unaryMinus());
@@ -1216,6 +1216,7 @@ public class SwerveDrive implements AutoCloseable
     {
       // Update odometry
       swerveDrivePoseEstimator.update(getYaw(), getModulePositions());
+      odometryNoAprilTags.update(getYaw(), getModulePositions());
 
       if (SwerveDriveTelemetry.isSimulation)
       {
@@ -1232,7 +1233,7 @@ public class SwerveDrive implements AutoCloseable
       if (SwerveDriveTelemetry.verbosity.ordinal() >= TelemetryVerbosity.INFO.ordinal())
       {
         SwerveDriveTelemetry.measuredChassisSpeedsObj = getRobotVelocity();
-        SwerveDriveTelemetry.robotRotationObj = getOdometryHeading();
+        SwerveDriveTelemetry.robotRotationObj = getOdometryHeadingNoAprilTags();
       }
 
       if (SwerveDriveTelemetry.verbosity.ordinal() >= TelemetryVerbosity.POSE.ordinal())
@@ -1258,7 +1259,7 @@ public class SwerveDrive implements AutoCloseable
         {
           module.updateTelemetry();
           rawIMUPublisher.set(getYaw().getDegrees());
-          adjustedIMUPublisher.set(getOdometryHeading().getDegrees());
+          adjustedIMUPublisher.set(getOdometryHeadingNoAprilTags().getDegrees());
         }
         if (SwerveDriveTelemetry.verbosity.ordinal() >= TelemetryVerbosity.INFO.ordinal())
         {
@@ -1602,9 +1603,9 @@ public class SwerveDrive implements AutoCloseable
     if (angularVelocity.getRadians() != 0.0)
     {
       ChassisSpeeds fieldRelativeVelocity = ChassisSpeeds.fromRobotRelativeSpeeds(robotRelativeVelocity,
-                                                                                  getOdometryHeading());
+                                                                                  getOdometryHeadingNoAprilTags());
       robotRelativeVelocity = ChassisSpeeds.fromFieldRelativeSpeeds(fieldRelativeVelocity,
-                                                                    getOdometryHeading().plus(angularVelocity));
+                                                                    getOdometryHeadingNoAprilTags().plus(angularVelocity));
     }
     return robotRelativeVelocity;
   }
