@@ -1,4 +1,4 @@
-package swervelib;
+package com.frc3481.swervelib;
 
 import static edu.wpi.first.units.Units.InchesPerSecond;
 import static edu.wpi.first.units.Units.MetersPerSecond;
@@ -17,19 +17,19 @@ import edu.wpi.first.units.measure.LinearVelocity;
 import edu.wpi.first.wpilibj.Alert;
 import edu.wpi.first.wpilibj.Alert.AlertType;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import swervelib.encoders.SparkMaxEncoderSwerve;
-import swervelib.encoders.SwerveAbsoluteEncoder;
-import swervelib.math.SwerveMath;
-import swervelib.motors.SparkMaxBrushedMotorSwerve;
-import swervelib.motors.SparkMaxSwerve;
-import swervelib.motors.SwerveMotor;
-import swervelib.parser.Cache;
-import swervelib.parser.PIDFConfig;
-import swervelib.parser.SwerveModuleConfiguration;
-import swervelib.parser.SwerveModulePhysicalCharacteristics;
-import swervelib.simulation.SwerveModuleSimulation;
-import swervelib.telemetry.SwerveDriveTelemetry;
-import swervelib.telemetry.SwerveDriveTelemetry.TelemetryVerbosity;
+import com.frc3481.swervelib.encoders.SparkMaxEncoderSwerve;
+import com.frc3481.swervelib.encoders.SwerveAbsoluteEncoder;
+import com.frc3481.swervelib.math.SwerveMath;
+import com.frc3481.swervelib.motors.SparkMaxBrushedMotorSwerve;
+import com.frc3481.swervelib.motors.SparkMaxSwerve;
+import com.frc3481.swervelib.motors.SwerveMotor;
+import com.frc3481.swervelib.parser.Cache;
+import com.frc3481.swervelib.parser.PIDFConfig;
+import com.frc3481.swervelib.parser.SwerveModuleConfiguration;
+import com.frc3481.swervelib.parser.SwerveModulePhysicalCharacteristics;
+import com.frc3481.swervelib.simulation.SwerveModuleSimulation;
+import com.frc3481.swervelib.telemetry.SwerveDriveTelemetry;
+import com.frc3481.swervelib.telemetry.SwerveDriveTelemetry.TelemetryVerbosity;
 
 /**
  * The Swerve Module class which represents and controls Swerve Modules for the swerve drive.

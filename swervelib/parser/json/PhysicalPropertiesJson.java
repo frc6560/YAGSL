@@ -1,12 +1,12 @@
-package swervelib.parser.json;
+package com.frc3481.swervelib.parser.json;
 
 import static edu.wpi.first.units.Units.Kilogram;
 import static edu.wpi.first.units.Units.Pounds;
 
 import edu.wpi.first.wpilibj.Alert;
 import edu.wpi.first.wpilibj.Alert.AlertType;
-import swervelib.parser.SwerveModulePhysicalCharacteristics;
-import swervelib.parser.json.modules.ConversionFactorsJson;
+import com.frc3481.swervelib.parser.SwerveModulePhysicalCharacteristics;
+import com.frc3481.swervelib.parser.json.modules.ConversionFactorsJson;
 
 /**
  * {@link swervelib.parser.SwerveModulePhysicalCharacteristics} parsed data. Used to configure the SwerveModule.

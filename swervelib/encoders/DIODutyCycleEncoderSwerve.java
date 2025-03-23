@@ -1,4 +1,4 @@
-package swervelib.encoders;
+package com.frc3481.swervelib.encoders;
 
 import edu.wpi.first.wpilibj.Alert;
 import edu.wpi.first.wpilibj.Alert.AlertType;

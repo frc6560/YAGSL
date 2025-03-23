@@ -1,4 +1,4 @@
-package swervelib.motors;
+package com.frc3481.swervelib.motors;
 
 import static edu.wpi.first.units.Units.Degrees;
 import static edu.wpi.first.units.Units.Rotations;
@@ -13,9 +13,9 @@ import com.ctre.phoenix6.signals.FeedbackSensorSourceValue;
 import com.ctre.phoenix6.signals.InvertedValue;
 import com.ctre.phoenix6.signals.NeutralModeValue;
 import edu.wpi.first.math.system.plant.DCMotor;
-import swervelib.encoders.SwerveAbsoluteEncoder;
-import swervelib.parser.PIDFConfig;
-import swervelib.telemetry.SwerveDriveTelemetry;
+import com.frc3481.swervelib.encoders.SwerveAbsoluteEncoder;
+import com.frc3481.swervelib.parser.PIDFConfig;
+import com.frc3481.swervelib.telemetry.SwerveDriveTelemetry;
 
 /**
  * {@link com.ctre.phoenix6.hardware.TalonFX} Swerve Motor. Made by Team 1466 WebbRobotics.

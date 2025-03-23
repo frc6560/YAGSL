@@ -1,4 +1,4 @@
-package swervelib;
+package com.frc3481.swervelib;
 
 import static edu.wpi.first.hal.FRCNetComm.tInstances.kRobotDriveSwerve_YAGSL;
 import static edu.wpi.first.hal.FRCNetComm.tResourceType.kResourceType_RobotDrive;
@@ -56,17 +56,17 @@ import org.ironmaple.simulation.drivesims.AbstractDriveTrainSimulation;
 import org.ironmaple.simulation.drivesims.SwerveDriveSimulation;
 import org.ironmaple.simulation.drivesims.configs.DriveTrainSimulationConfig;
 import org.ironmaple.simulation.drivesims.configs.SwerveModuleSimulationConfig;
-import swervelib.encoders.CANCoderSwerve;
-import swervelib.imu.Pigeon2Swerve;
-import swervelib.imu.SwerveIMU;
-import swervelib.math.SwerveMath;
-import swervelib.motors.TalonFXSwerve;
-import swervelib.parser.Cache;
-import swervelib.parser.SwerveControllerConfiguration;
-import swervelib.parser.SwerveDriveConfiguration;
-import swervelib.simulation.SwerveIMUSimulation;
-import swervelib.telemetry.SwerveDriveTelemetry;
-import swervelib.telemetry.SwerveDriveTelemetry.TelemetryVerbosity;
+import com.frc3481.swervelib.encoders.CANCoderSwerve;
+import com.frc3481.swervelib.imu.Pigeon2Swerve;
+import com.frc3481.swervelib.imu.SwerveIMU;
+import com.frc3481.swervelib.math.SwerveMath;
+import com.frc3481.swervelib.motors.TalonFXSwerve;
+import com.frc3481.swervelib.parser.Cache;
+import com.frc3481.swervelib.parser.SwerveControllerConfiguration;
+import com.frc3481.swervelib.parser.SwerveDriveConfiguration;
+import com.frc3481.swervelib.simulation.SwerveIMUSimulation;
+import com.frc3481.swervelib.telemetry.SwerveDriveTelemetry;
+import com.frc3481.swervelib.telemetry.SwerveDriveTelemetry.TelemetryVerbosity;
 
 /**
  * Swerve Drive class representing and controlling the swerve drive.

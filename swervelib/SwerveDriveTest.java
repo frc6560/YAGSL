@@ -1,4 +1,4 @@
-package swervelib;
+package com.frc3481.swervelib;
 
 import static edu.wpi.first.units.Units.Degrees;
 import static edu.wpi.first.units.Units.DegreesPerSecond;
@@ -28,8 +28,8 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine;
 import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine.Config;
 import java.util.function.Supplier;
-import swervelib.encoders.SwerveAbsoluteEncoder;
-import swervelib.telemetry.SwerveDriveTelemetry;
+import com.frc3481.swervelib.encoders.SwerveAbsoluteEncoder;
+import com.frc3481.swervelib.telemetry.SwerveDriveTelemetry;
 
 /**
  * Class to perform tests on the swerve drive.

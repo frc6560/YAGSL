@@ -1,4 +1,4 @@
-package swervelib.motors;
+package com.frc3481.swervelib.motors;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
@@ -8,12 +8,12 @@ import com.ctre.phoenix.motorcontrol.StatusFrameEnhanced;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.math.system.plant.DCMotor;
-import swervelib.encoders.SwerveAbsoluteEncoder;
-import swervelib.encoders.TalonSRXEncoderSwerve;
-import swervelib.math.SwerveMath;
-import swervelib.parser.PIDFConfig;
-import swervelib.parser.json.modules.ConversionFactorsJson;
-import swervelib.telemetry.SwerveDriveTelemetry;
+import com.frc3481.swervelib.encoders.SwerveAbsoluteEncoder;
+import com.frc3481.swervelib.encoders.TalonSRXEncoderSwerve;
+import com.frc3481.swervelib.math.SwerveMath;
+import com.frc3481.swervelib.parser.PIDFConfig;
+import com.frc3481.swervelib.parser.json.modules.ConversionFactorsJson;
+import com.frc3481.swervelib.telemetry.SwerveDriveTelemetry;
 
 /**
  * {@link com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX} Swerve Motor.

@@ -2,7 +2,7 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package swervelib.motors;
+package com.frc3481.swervelib.motors;
 
 import com.thethriftybot.Conversion;
 import com.thethriftybot.Conversion.PositionUnit;
@@ -17,8 +17,8 @@ import edu.wpi.first.wpilibj.DataLogManager;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.RobotController;
 import java.util.List;
-import swervelib.encoders.SwerveAbsoluteEncoder;
-import swervelib.parser.PIDFConfig;
+import com.frc3481.swervelib.encoders.SwerveAbsoluteEncoder;
+import com.frc3481.swervelib.parser.PIDFConfig;
 
 /**
  * An implementation of {@link ThriftyNova} as a {@link SwerveMotor}.

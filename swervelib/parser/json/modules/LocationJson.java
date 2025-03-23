@@ -1,4 +1,4 @@
-package swervelib.parser.json.modules;
+package com.frc3481.swervelib.parser.json.modules;
 
 /**
  * Location JSON parsed class. Used to access the JSON data. Module locations, in inches, as distances to the center of

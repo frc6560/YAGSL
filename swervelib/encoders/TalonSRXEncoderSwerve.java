@@ -1,9 +1,9 @@
-package swervelib.encoders;
+package com.frc3481.swervelib.encoders;
 
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import swervelib.motors.SwerveMotor;
-import swervelib.motors.TalonSRXSwerve;
+import com.frc3481.swervelib.motors.SwerveMotor;
+import com.frc3481.swervelib.motors.TalonSRXSwerve;
 
 /**
  * Talon SRX attached absolute encoder.

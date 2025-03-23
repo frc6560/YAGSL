@@ -1,4 +1,4 @@
-package swervelib.parser.json.modules;
+package com.frc3481.swervelib.parser.json.modules;
 
 /**
  * Conversion Factors parsed JSON class

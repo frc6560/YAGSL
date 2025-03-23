@@ -1,7 +1,7 @@
-package swervelib.encoders;
+package com.frc3481.swervelib.encoders;
 
-import swervelib.motors.SwerveMotor;
-import swervelib.motors.ThriftyNovaSwerve;
+import com.frc3481.swervelib.motors.SwerveMotor;
+import com.frc3481.swervelib.motors.ThriftyNovaSwerve;
 
 /**
  * Thrifty Nova absolute encoder, attached through the data port.

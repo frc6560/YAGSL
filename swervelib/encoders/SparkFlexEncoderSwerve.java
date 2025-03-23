@@ -1,4 +1,4 @@
-package swervelib.encoders;
+package com.frc3481.swervelib.encoders;
 
 import com.revrobotics.AbsoluteEncoder;
 import com.revrobotics.spark.SparkAbsoluteEncoder;
@@ -6,8 +6,8 @@ import com.revrobotics.spark.SparkFlex;
 import com.revrobotics.spark.config.SparkFlexConfig;
 import edu.wpi.first.wpilibj.Alert;
 import edu.wpi.first.wpilibj.Alert.AlertType;
-import swervelib.motors.SparkFlexSwerve;
-import swervelib.motors.SwerveMotor;
+import com.frc3481.swervelib.motors.SparkFlexSwerve;
+import com.frc3481.swervelib.motors.SwerveMotor;
 
 /**
  * SparkFlex absolute encoder, attached through the data port.

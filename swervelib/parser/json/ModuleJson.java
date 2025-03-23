@@ -1,18 +1,18 @@
-package swervelib.parser.json;
+package com.frc3481.swervelib.parser.json;
 
 import com.revrobotics.spark.SparkMax;
 import edu.wpi.first.math.util.Units;
-import swervelib.encoders.SparkMaxEncoderSwerve;
-import swervelib.encoders.SwerveAbsoluteEncoder;
-import swervelib.encoders.ThriftyNovaEncoderSwerve;
-import swervelib.motors.SwerveMotor;
-import swervelib.motors.ThriftyNovaSwerve;
-import swervelib.parser.PIDFConfig;
-import swervelib.parser.SwerveModuleConfiguration;
-import swervelib.parser.SwerveModulePhysicalCharacteristics;
-import swervelib.parser.json.modules.BoolMotorJson;
-import swervelib.parser.json.modules.ConversionFactorsJson;
-import swervelib.parser.json.modules.LocationJson;
+import com.frc3481.swervelib.encoders.SparkMaxEncoderSwerve;
+import com.frc3481.swervelib.encoders.SwerveAbsoluteEncoder;
+import com.frc3481.swervelib.encoders.ThriftyNovaEncoderSwerve;
+import com.frc3481.swervelib.motors.SwerveMotor;
+import com.frc3481.swervelib.motors.ThriftyNovaSwerve;
+import com.frc3481.swervelib.parser.PIDFConfig;
+import com.frc3481.swervelib.parser.SwerveModuleConfiguration;
+import com.frc3481.swervelib.parser.SwerveModulePhysicalCharacteristics;
+import com.frc3481.swervelib.parser.json.modules.BoolMotorJson;
+import com.frc3481.swervelib.parser.json.modules.ConversionFactorsJson;
+import com.frc3481.swervelib.parser.json.modules.LocationJson;
 
 /**
  * {@link swervelib.SwerveModule} JSON parsed class. Used to access the JSON data.

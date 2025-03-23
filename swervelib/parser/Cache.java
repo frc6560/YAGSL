@@ -1,4 +1,4 @@
-package swervelib.parser;
+package com.frc3481.swervelib.parser;
 
 import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.RobotController;

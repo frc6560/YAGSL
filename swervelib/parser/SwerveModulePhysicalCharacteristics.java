@@ -1,6 +1,6 @@
-package swervelib.parser;
+package com.frc3481.swervelib.parser;
 
-import swervelib.parser.json.modules.ConversionFactorsJson;
+import com.frc3481.swervelib.parser.json.modules.ConversionFactorsJson;
 
 /**
  * Configuration class which stores physical characteristics shared between every swerve module.

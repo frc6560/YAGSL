@@ -1,9 +1,9 @@
-package swervelib.parser;
+package com.frc3481.swervelib.parser;
 
 import edu.wpi.first.math.geometry.Translation2d;
-import swervelib.encoders.SwerveAbsoluteEncoder;
-import swervelib.motors.SwerveMotor;
-import swervelib.parser.json.modules.ConversionFactorsJson;
+import com.frc3481.swervelib.encoders.SwerveAbsoluteEncoder;
+import com.frc3481.swervelib.motors.SwerveMotor;
+import com.frc3481.swervelib.parser.json.modules.ConversionFactorsJson;
 
 /**
  * Swerve Module configuration class which is used to configure {@link swervelib.SwerveModule}.

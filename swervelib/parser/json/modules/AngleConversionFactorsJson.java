@@ -1,6 +1,6 @@
-package swervelib.parser.json.modules;
+package com.frc3481.swervelib.parser.json.modules;
 
-import swervelib.math.SwerveMath;
+import com.frc3481.swervelib.math.SwerveMath;
 
 /**
  * Angle motor conversion factors composite JSON parse class.

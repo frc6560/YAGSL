@@ -1,7 +1,7 @@
-package swervelib.parser;
+package com.frc3481.swervelib.parser;
 
 import edu.wpi.first.math.controller.PIDController;
-import swervelib.parser.deserializer.PIDFRange;
+import com.frc3481.swervelib.parser.deserializer.PIDFRange;
 
 /**
  * Hold the PIDF and Integral Zone values for a PID.

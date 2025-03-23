@@ -1,4 +1,4 @@
-package swervelib.simulation;
+package com.frc3481.swervelib.simulation;
 
 import static edu.wpi.first.units.Units.Amps;
 
@@ -6,8 +6,8 @@ import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import org.ironmaple.simulation.drivesims.SelfControlledSwerveDriveSimulation;
-import swervelib.SwerveDrive;
-import swervelib.parser.SwerveModulePhysicalCharacteristics;
+import com.frc3481.swervelib.SwerveDrive;
+import com.frc3481.swervelib.parser.SwerveModulePhysicalCharacteristics;
 
 /**
  * Class that wraps around {@link org.ironmaple.simulation.drivesims.SwerveModuleSimulation}

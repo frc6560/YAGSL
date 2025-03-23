@@ -1,9 +1,9 @@
-package swervelib.imu;
+package com.frc3481.swervelib.imu;
 
 import edu.wpi.first.hal.HALUtil;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.wpilibj.Notifier;
-import swervelib.math.IMULinearMovingAverageFilter;
+import com.frc3481.swervelib.math.IMULinearMovingAverageFilter;
 
 /**
  * Generic IMU Velocity filter.

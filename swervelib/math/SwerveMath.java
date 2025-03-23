@@ -1,4 +1,4 @@
-package swervelib.math;
+package com.frc3481.swervelib.math;
 
 import edu.wpi.first.math.controller.SimpleMotorFeedforward;
 import edu.wpi.first.math.geometry.Pose2d;
@@ -9,10 +9,10 @@ import edu.wpi.first.math.geometry.Twist2d;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import java.util.List;
-import swervelib.SwerveController;
-import swervelib.SwerveModule;
-import swervelib.parser.SwerveDriveConfiguration;
-import swervelib.parser.SwerveModuleConfiguration;
+import com.frc3481.swervelib.SwerveController;
+import com.frc3481.swervelib.SwerveModule;
+import com.frc3481.swervelib.parser.SwerveDriveConfiguration;
+import com.frc3481.swervelib.parser.SwerveModuleConfiguration;
 
 /**
  * Mathematical functions which pertain to swerve drive.

@@ -1,6 +1,6 @@
-package swervelib.parser.json;
+package com.frc3481.swervelib.parser.json;
 
-import swervelib.parser.PIDFConfig;
+import com.frc3481.swervelib.parser.PIDFConfig;
 
 /**
  * {@link swervelib.SwerveModule} PID with Feedforward for the drive motor and angle motor.

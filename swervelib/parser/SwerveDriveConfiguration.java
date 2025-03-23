@@ -1,15 +1,15 @@
-package swervelib.parser;
+package com.frc3481.swervelib.parser;
 
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.system.plant.DCMotor;
 import java.util.function.Supplier;
 import org.ironmaple.simulation.drivesims.COTS;
 import org.ironmaple.simulation.drivesims.GyroSimulation;
-import swervelib.SwerveModule;
-import swervelib.imu.NavXSwerve;
-import swervelib.imu.Pigeon2Swerve;
-import swervelib.imu.SwerveIMU;
-import swervelib.math.SwerveMath;
+import com.frc3481.swervelib.SwerveModule;
+import com.frc3481.swervelib.imu.NavXSwerve;
+import com.frc3481.swervelib.imu.Pigeon2Swerve;
+import com.frc3481.swervelib.imu.SwerveIMU;
+import com.frc3481.swervelib.math.SwerveMath;
 
 /**
  * Swerve drive configurations used during SwerveDrive construction.

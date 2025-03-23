@@ -1,7 +1,7 @@
-package swervelib.parser.json.modules;
+package com.frc3481.swervelib.parser.json.modules;
 
 import edu.wpi.first.math.util.Units;
-import swervelib.math.SwerveMath;
+import com.frc3481.swervelib.math.SwerveMath;
 
 /**
  * Drive motor composite JSON parse class.

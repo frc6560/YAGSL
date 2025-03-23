@@ -1,4 +1,4 @@
-package swervelib.imu;
+package com.frc3481.swervelib.imu;
 
 import static edu.wpi.first.units.Units.RotationsPerSecond;
 

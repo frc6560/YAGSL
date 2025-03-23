@@ -1,8 +1,8 @@
-package swervelib.motors;
+package com.frc3481.swervelib.motors;
 
 import edu.wpi.first.math.system.plant.DCMotor;
-import swervelib.encoders.SwerveAbsoluteEncoder;
-import swervelib.parser.PIDFConfig;
+import com.frc3481.swervelib.encoders.SwerveAbsoluteEncoder;
+import com.frc3481.swervelib.parser.PIDFConfig;
 
 /**
  * Swerve motor abstraction which defines a standard interface for motors within a swerve module.

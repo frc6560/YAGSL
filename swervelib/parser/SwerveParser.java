@@ -1,4 +1,4 @@
-package swervelib.parser;
+package com.frc3481.swervelib.parser;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -7,14 +7,14 @@ import edu.wpi.first.math.geometry.Pose2d;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import swervelib.SwerveDrive;
-import swervelib.SwerveModule;
-import swervelib.math.SwerveMath;
-import swervelib.parser.json.ControllerPropertiesJson;
-import swervelib.parser.json.ModuleJson;
-import swervelib.parser.json.PIDFPropertiesJson;
-import swervelib.parser.json.PhysicalPropertiesJson;
-import swervelib.parser.json.SwerveDriveJson;
+import com.frc3481.swervelib.SwerveDrive;
+import com.frc3481.swervelib.SwerveModule;
+import com.frc3481.swervelib.math.SwerveMath;
+import com.frc3481.swervelib.parser.json.ControllerPropertiesJson;
+import com.frc3481.swervelib.parser.json.ModuleJson;
+import com.frc3481.swervelib.parser.json.PIDFPropertiesJson;
+import com.frc3481.swervelib.parser.json.PhysicalPropertiesJson;
+import com.frc3481.swervelib.parser.json.SwerveDriveJson;
 
 /**
  * Helper class used to parse the JSON directory with specified configuration options.

@@ -1,4 +1,4 @@
-package swervelib.encoders;
+package com.frc3481.swervelib.encoders;
 
 import edu.wpi.first.wpilibj.Alert;
 import edu.wpi.first.wpilibj.Alert.AlertType;
@@ -117,5 +117,14 @@ public class PWMDutyCycleEncoderSwerve extends SwerveAbsoluteEncoder
     this.offset = offset;
 
     return true;
+  }
+
+  /**
+   * Close the encoder and free resources.
+   */
+  @Override
+  public void close()
+  {
+    encoder.close();
   }
 }

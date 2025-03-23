@@ -1,4 +1,4 @@
-package swervelib.encoders;
+package com.frc3481.swervelib.encoders;
 
 import com.reduxrobotics.sensors.canandmag.Canandmag;
 import com.reduxrobotics.sensors.canandmag.CanandmagSettings;

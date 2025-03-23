@@ -1,4 +1,4 @@
-package swervelib.motors;
+package com.frc3481.swervelib.motors;
 
 import static edu.wpi.first.units.Units.Milliseconds;
 import static edu.wpi.first.units.Units.Seconds;
@@ -23,9 +23,9 @@ import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
 import java.util.Optional;
 import java.util.function.Supplier;
-import swervelib.encoders.SwerveAbsoluteEncoder;
-import swervelib.parser.PIDFConfig;
-import swervelib.telemetry.SwerveDriveTelemetry;
+import com.frc3481.swervelib.encoders.SwerveAbsoluteEncoder;
+import com.frc3481.swervelib.parser.PIDFConfig;
+import com.frc3481.swervelib.telemetry.SwerveDriveTelemetry;
 
 /**
  * An implementation of {@link SparkFlex} as a {@link SwerveMotor}.

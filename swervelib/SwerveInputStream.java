@@ -1,4 +1,4 @@
-package swervelib;
+package com.frc3481.swervelib;
 
 import edu.wpi.first.math.MathUtil;
 import edu.wpi.first.math.Nat;
@@ -18,7 +18,7 @@ import java.util.Optional;
 import java.util.function.BooleanSupplier;
 import java.util.function.DoubleSupplier;
 import java.util.function.Supplier;
-import swervelib.math.SwerveMath;
+import com.frc3481.swervelib.math.SwerveMath;
 
 /**
  * Helper class to easily transform Controller inputs into workable Chassis speeds. Intended to easily create an
