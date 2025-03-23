@@ -498,7 +498,7 @@ public class SwerveDrive implements AutoCloseable
                                                  ChassisSpeeds robotOrientedVelocity)
   {
 
-    drive(ChassisSpeeds.fromFieldRelativeSpeeds(fieldOrientedVelocity, getOdometryHeading())
+    drive(ChassisSpeeds.fromFieldRelativeSpeeds(fieldOrientedVelocity, getOdometryHeadingNoAprilTags())
                        .plus(robotOrientedVelocity));
   }
 
@@ -509,7 +509,7 @@ public class SwerveDrive implements AutoCloseable
    */
   public void driveFieldOriented(ChassisSpeeds fieldRelativeSpeeds)
   {
-    drive(ChassisSpeeds.fromFieldRelativeSpeeds(fieldRelativeSpeeds, getOdometryHeading()));
+    drive(ChassisSpeeds.fromFieldRelativeSpeeds(fieldRelativeSpeeds, getOdometryHeadingNoAprilTags()));
   }
 
   /**
@@ -520,7 +520,7 @@ public class SwerveDrive implements AutoCloseable
    */
   public void driveFieldOriented(ChassisSpeeds fieldRelativeSpeeds, Translation2d centerOfRotationMeters)
   {
-    drive(ChassisSpeeds.fromFieldRelativeSpeeds(fieldRelativeSpeeds, getOdometryHeading()), centerOfRotationMeters);
+    drive(ChassisSpeeds.fromFieldRelativeSpeeds(fieldRelativeSpeeds, getOdometryHeadingNoAprilTags()), centerOfRotationMeters);
   }
 
   /**
